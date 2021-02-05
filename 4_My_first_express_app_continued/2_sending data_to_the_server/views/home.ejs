@@ -1,0 +1,41 @@
+<!-- Make a form where we can add the data from user and send that data to our
+existing contact list -->
+<!-- 1. creating a form 
+2. Reading it and adding it to a list -->
+<html>
+    <head>
+        <title>
+            <%= locals.title %>
+        </title>
+    </head>
+    <body>
+        <div>
+            <ul>
+            	<% for(let i of contact_list) { %>
+            		<li>
+            			<p><%= i.name %></p>
+            			<p><%= i.phone %></p>
+            		</li>
+            	<% } %>
+            </ul>
+        </div>
+
+<!-- action signifies where we had to send the data i.e. we have to mention the route -->
+<!-- We have sending some data to the server side so we have to choose the method as post -->
+<!-- This form sends the data to the server in the form of a object having 
+properties name and phone and their values can be entered by user something like this-->
+
+<!--
+{
+    name : entered by user,
+    phone : entered by user
+} 
+// keys do not entered by user so we can use attribute name and set keys of an object
+ -->
+        <form action="/create-contact"method="POST">
+            <input type="text"name="name"placeholder="Enter Name">
+            <input type="number"name="phone"placeholder="Enter Phone">
+            <button type="submit">Add Contact</button>
+        </form>
+    </body>
+</html>

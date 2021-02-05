@@ -1,0 +1,18 @@
+<!-- sending some data from controller to view to make our page dynamic --> 
+<html>
+    <head>
+    	<title>
+   <!-- Elegator mouths jisse ki variable hai ya nahi aur us variable ki
+   		value print karani hai to = bhi use karenge -->
+    		<%= title %>	
+    	</title>
+    </head>
+    <body>
+        <h1> Rendered from ejs view </h1>
+    </body>
+</html>
+
+<!-- When we can change our ejs file our server do not restarts. why?? -->
+<!-- Whenever the server starts, the server file i.e. index.js is compiled
+but this page is dynamic whenever the user wants to see this page, then only 
+this page is runs and appears -->

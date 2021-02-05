@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+    </head>
+    <body>
+<!-- We have common header and footer in home and user profile page. So here we can use partials -->
+    	<%- include(_header); -%>
+        <h1>Codeial / <%= title %></h1>
+        <%- include(_footer); -%>
+    </body>
+</html>

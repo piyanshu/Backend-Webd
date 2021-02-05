@@ -1,0 +1,28 @@
+<!-- We can already tell nodejs that we can place our static files in assets folder -->
+<!-- This is our front end part which is shown on browser so we have to link our css and js here -->
+<html>
+    <head>
+        <title>
+            <%= locals.title %>
+        </title>
+        <link rel="stylesheet"href="/css/home.css">
+    </head>
+    <body>
+        <div>
+            <ul>
+                <% for(let i of contact_list) { %>
+                    <li>
+                        <p><%= i.name %></p>
+                        <p><%= i.phone %></p>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+        <form action="/create-contact"method="POST">
+            <input type="text"name="name"placeholder="Enter Name">
+            <input type="number"name="phone"placeholder="Enter Phone">
+            <button tyep="submit">Add Contact</button>
+        </form>
+        <script type="text/javscript"src="js/home.js">
+    </body>
+</html>

@@ -1,0 +1,14 @@
+<!-- for all the pages we can render like home and user-profile we have same layout so styling is also same for all pages -->
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <link rel="stylesheet" href="/css/layout.css">
+    </head>
+    <body>
+        <%- include('_header'); -%>
+        <%- body %>
+        <%- include('_footer'); -%>
+    </body>
+</html>

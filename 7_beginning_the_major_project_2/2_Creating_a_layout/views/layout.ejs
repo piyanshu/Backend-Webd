@@ -1,0 +1,17 @@
+<!-- This body is wrap inside this wrapper -->
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+    </head>
+    <body>
+        <%- include('_header'); -%>
+
+<!-- This body is predefined from the library and the body contains the variable part -->
+<!-- We rendered a file from controller then that file is filled in this body part. For eg- users_profile page is rendered from users_controller then that page is filled in this body and then this layout is send to the browser -->
+        <%- body %>
+
+        <%- include('_footer'); -%>
+    </body>
+</html>
